@@ -11,8 +11,8 @@ function App() {
   }
 
   const handleChange = (e) => {
-    const { name, value } = e.target;
-    setFormData({ ...formData, [name]: value });
+    const { id, value } = e.target;
+    setFormData({ ...formData, [id]: value });
   };
 
   const handleSubmit = (e) => {
@@ -51,14 +51,14 @@ function App() {
           <form onSubmit={handleSubmit}>
             <h2>Fill Details</h2>
             <label htmlFor="username">Username:</label><br/>
-            <input type="text" name="username" value={formData.username} onChange={handleChange} required /><br/>
+            <input type="text" id="username" value={formData.username} onChange={handleChange} required /><br/>
             <label htmlFor="email">Email Address:</label><br/>
-            <input type="email" name="email" value={formData.email} onChange={handleChange} required /><br/>
+            <input type="email" id="email" value={formData.email} onChange={handleChange} required /><br/>
             <label htmlFor="phone">Phone Number:</label><br/>
-            <input type="text" name="phone" value={formData.phone} onChange={handleChange} required /><br/>
+            <input type="text" id="phone" value={formData.phone} onChange={handleChange} required /><br/>
             <label htmlFor="dob">Date of Birth:</label><br/>
-            <input type="date" name="dob" value={formData.dob} onChange={handleChange} required /><br/>
-            <button type="submit">Submit</button>
+            <input type="date" id="dob" value={formData.dob} onChange={handleChange} required /><br/>
+            <button type="submit" className='submit-button'>Submit</button>
           </form>
         </div>
       </div>

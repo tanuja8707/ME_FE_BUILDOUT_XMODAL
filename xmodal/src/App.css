@@ -71,7 +71,7 @@ form input {
   border-radius: 3px;
 }
 
-form button, button {
+.submit-button, button {
   color: #FFFFFF;
   background-color: blue;
   padding: 8px 16px;
